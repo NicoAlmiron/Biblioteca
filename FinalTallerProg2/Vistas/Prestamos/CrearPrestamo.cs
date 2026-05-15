@@ -3,6 +3,8 @@ using FinalTallerProg2.Logica.Autor;
 using FinalTallerProg2.Logica.Estudiante;
 using FinalTallerProg2.Logica.Libro;
 using FinalTallerProg2.Vistas.Estudiantes;
+using FinalTallerProg2.Vistas.Inicio;
+using FinalTallerProg2.Vistas.Libros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -89,9 +91,19 @@ namespace FinalTallerProg2.Vistas.Prestamos
 
         private void btn_volver_Click(object sender, EventArgs e)
         {
-            PrestamosV prestamos = new PrestamosV();
-            prestamos.Visible = true;
+
+            bool estado = false;
+            estado = Application.OpenForms.OfType<PrestamoInfo>().Any();
+
+            if (!estado)
+            {
+                PrestamosV prestamos = new PrestamosV();
+                prestamos.Visible = true;
+
+            }
+
             this.Close();
+
         }
 
         private void CrearPrestamo_Load(object sender, EventArgs e)
@@ -271,15 +283,21 @@ namespace FinalTallerProg2.Vistas.Prestamos
         private void btn_nuevoEstudiante_Click(object sender, EventArgs e)
         {
             CrearEstudiante crearEstudiante = new CrearEstudiante();
-            crearEstudiante.Visible = true;
+            crearEstudiante.ShowDialog();
 
-            //listaEst = Estudiante.ListarEstudiantes();
-            CargarCbEstudiante(Estudiante.ListarEstudiantes());
+            listaEst.Clear();
+            listaEst = Estudiante.ListarEstudiantes();
+            CargarCbEstudiante(listaEst);
         }
 
         private void btn_nuevoLibro_Click(object sender, EventArgs e)
         {
+            CrearLibro crearLibro = new CrearLibro();
+            crearLibro.ShowDialog();
 
+            listaLibros.Clear();
+            listaLibros = Libro.ListarLibros();
+            CargarCbLibro(listaLibros);
         }
     }
 }

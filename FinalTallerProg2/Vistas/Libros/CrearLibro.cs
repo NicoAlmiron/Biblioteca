@@ -1,5 +1,6 @@
 ﻿using FinalTallerProg2.Logica.Autor;
 using FinalTallerProg2.Logica.Libro;
+using FinalTallerProg2.Vistas.Prestamos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace FinalTallerProg2.Vistas.Libros
         public CrearLibro()
         {
             InitializeComponent();
-            
+            LimpiarCampos();
         }
 
         private void LimpiarCampos()
@@ -55,8 +56,18 @@ namespace FinalTallerProg2.Vistas.Libros
 
         private void btn_volver_Click(object sender, EventArgs e)
         {
-            Libros libros = new Libros();
-            libros.Visible = true;
+
+
+            bool estado = false;
+            estado = Application.OpenForms.OfType<CrearPrestamo>().Any();
+
+            if (!estado)
+            {
+                Libros libros = new Libros();
+                libros.Visible = true;
+
+            }
+
             this.Close();
         }
 
@@ -74,8 +85,7 @@ namespace FinalTallerProg2.Vistas.Libros
 
         private void cb_autor_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            if(cb_autor.SelectedIndex == -1)
+            if (cb_autor.SelectedIndex == -1)
             {
                 ep_autor.SetError(cb_autor, "Selecciona un autor!");
             }
@@ -111,6 +121,18 @@ namespace FinalTallerProg2.Vistas.Libros
             }
 
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CargarAutor cargarAutor = new CargarAutor();
+
+            cargarAutor.ShowDialog();
+
+
+            cb_autor.Items.Clear();
+            listAutors.Clear();
+            CargarCBAutores();
         }
     }
 }
