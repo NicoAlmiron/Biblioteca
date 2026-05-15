@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E1C6BA1-6482-467E-A640-C583308AD17A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FinalTallerProg2</RootNamespace>
+    <AssemblyName>FinalTallerProg2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Logica\Autor\Autor.cs" />
+    <Compile Include="Logica\Conexion.cs" />
+    <Compile Include="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logica\Estudiante\Estudiante.cs" />
+    <Compile Include="Logica\Libro\Libro.cs" />
+    <Compile Include="Logica\Prestamo\Prestamo.cs" />
+    <Compile Include="Vistas\Autores\Autores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Autores\Autores.Designer.cs">
+      <DependentUpon>Autores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Estudiantes\CrearEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Estudiantes\CrearEstudiante.Designer.cs">
+      <DependentUpon>CrearEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Estudiantes\EditarEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Estudiantes\EditarEstudiante.Designer.cs">
+      <DependentUpon>EditarEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Estudiantes\Estudiantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Estudiantes\Estudiantes.Designer.cs">
+      <DependentUpon>Estudiantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Inicio\AutoresInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inicio\AutoresInfo.Designer.cs">
+      <DependentUpon>AutoresInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Inicio\EstudiantesInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inicio\EstudiantesInfo.Designer.cs">
+      <DependentUpon>EstudiantesInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Inicio\LibrosInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inicio\LibrosInfo.Designer.cs">
+      <DependentUpon>LibrosInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Inicio\PrestamoInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Inicio\PrestamoInfo.Designer.cs">
+      <DependentUpon>PrestamoInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Libros\CrearLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Libros\CrearLibro.Designer.cs">
+      <DependentUpon>CrearLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Libros\EditarLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Libros\EditarLibros.Designer.cs">
+      <DependentUpon>EditarLibros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Libros\Libros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Libros\Libros.Designer.cs">
+      <DependentUpon>Libros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Prestamos\CrearPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Prestamos\CrearPrestamo.Designer.cs">
+      <DependentUpon>CrearPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Prestamos\PrestamosV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Prestamos\PrestamosV.Designer.cs">
+      <DependentUpon>PrestamosV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Autores\Autores.resx">
+      <DependentUpon>Autores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Estudiantes\CrearEstudiante.resx">
+      <DependentUpon>CrearEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Estudiantes\EditarEstudiante.resx">
+      <DependentUpon>EditarEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Estudiantes\Estudiantes.resx">
+      <DependentUpon>Estudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Inicio\AutoresInfo.resx">
+      <DependentUpon>AutoresInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Inicio\EstudiantesInfo.resx">
+      <DependentUpon>EstudiantesInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Inicio\LibrosInfo.resx">
+      <DependentUpon>LibrosInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Inicio\PrestamoInfo.resx">
+      <DependentUpon>PrestamoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Libros\CrearLibro.resx">
+      <DependentUpon>CrearLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Libros\EditarLibros.resx">
+      <DependentUpon>EditarLibros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Libros\Libros.resx">
+      <DependentUpon>Libros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Prestamos\CrearPrestamo.resx">
+      <DependentUpon>CrearPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Prestamos\PrestamosV.resx">
+      <DependentUpon>PrestamosV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
