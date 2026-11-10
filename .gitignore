@@ -1,5 +1,14 @@
+# ---------- Visual Studio / compilación ----------
 .vs/
 bin/
 obj/
+packages/
 *.user
 *.suo
+*.cache
+
+# ---------- Claude Code ----------
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+
