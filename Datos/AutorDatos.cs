@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Datos
 {
     // capa de datos de autor: aca estan todas las consultas a la tabla Autor
-    // no tiene validaciones, eso lo hace la capa de negocio
+    // no tiene validaciones, eso lo hace la capa de negocio 
     public class AutorDatos
     {
 
